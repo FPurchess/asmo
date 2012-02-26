@@ -3,7 +3,7 @@ This is the easiest way to send and receive data to/from your serial adapter usi
 Basic idea was a way to interact and debug with an arduino in a local network.
 
 ## Requirements ##
-This software has been tested with Python 2.7 and needs pySerial, ConfigParser and Bottle.
+This software has been developed with Python 2.7 and needs pySerial, ConfigParser and Bottle.  
 Using EasyInstall, you can run ``easy_install pySerial configparser bottle``
 
 ## Configuration ##
