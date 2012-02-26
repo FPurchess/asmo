@@ -25,7 +25,9 @@
 
         window.setInterval(function () {
             $.get('/serial', function (data) {
-                write(data, false);
+                if (data != "") {
+                    write(data, false);
+                }
             });
         }, speed);
 

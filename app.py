@@ -31,11 +31,11 @@ def get_serial():
     if not ser:
         return ''
 
-    try:
-        return ser.readline()
-    except serial.SerialTimeoutException:
-        return ''
+    resp = ""
+    while ser.inWaiting():
+        resp += ser.readline()[0:-2]
 
+    return resp
 
 @route('/serial', method='POST')
 def send_serial():
