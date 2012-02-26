@@ -8,6 +8,8 @@ from bottle import route, static_file, template, run, debug, request
 config = ConfigParser.ConfigParser()
 config.read(['config.conf'])
 
+pollSpeed = config.get('gui', 'poll_speed')
+
 try:
     ser = serial.Serial(config.get('serial', 'serial'), config.get('serial', 'baud'))
 except serial.SerialException:
@@ -21,7 +23,7 @@ def static(file):
 
 @route('/')
 def index():
-    return template('templates/index.tpl', init=(ser is not None))
+    return template('templates/index.tpl', init=(ser is not None), pollSpeed=pollSpeed)
 
 
 @route('/serial', method='GET')
@@ -33,6 +35,7 @@ def get_serial():
         return ser.readline()
     except serial.SerialTimeoutException:
         return ''
+
 
 @route('/serial', method='POST')
 def send_serial():

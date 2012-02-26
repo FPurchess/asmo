@@ -8,6 +8,13 @@
 
     <script type="text/javascript" src="/static/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/static/script.js"></script>
+    <script type="text/javascript">
+        %if pollSpeed:
+        var speed = {{pollSpeed}};
+        %else:
+        var speed = 1000;
+        %end
+    </script>
 </head>
 <body>
 %if not init:

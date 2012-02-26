@@ -1,10 +1,6 @@
 (function ($) {
 
-    var speed = 2000;
-
     $(document).ready(function () {
-
-        if ($('.warning').length) return;
 
         var pre = $('pre');
         var html = pre.html();
@@ -14,7 +10,7 @@
                 + (send ? '<span class="out">' : '<span class="in">')
                 + (new Date()).toTimeString().substr(0, 9)
                 + data + '</span>' + "\n";
-            pre.html(html);
+            pre.html(html).scrollTop(html.length);
         }
 
         $('form').live('submit', function (e) {
