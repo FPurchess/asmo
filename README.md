@@ -1,6 +1,6 @@
 # asmo - a serial monitor online #
 This is the easiest way to send and receive data to/from your serial adapter using a webfrontend.
-Basic idea was a way to interact and debug with an arduino in a local network.
+Basic idea was a way to interact and debug with a microprocessor in a local network.
 
 ## Requirements ##
 This software has been developed with Python 2.7 and needs pySerial, ConfigParser and Bottle.  
@@ -17,3 +17,6 @@ port - port of the webserver (default 8080)
 #### Serial Connection [serial] ####
 serial - path to your serial adapter  
 baud - baud-rate
+
+#### User Interface [gui] ####
+poll_speed - delay (in ms) of refreshing/polling the serial adapter
