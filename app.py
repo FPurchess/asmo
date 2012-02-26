@@ -28,11 +28,8 @@ def index():
 
 @route('/serial', method='GET')
 def get_serial():
-    if not ser:
-        return ''
-
     resp = ""
-    while ser.inWaiting():
+    while ser and ser.inWaiting():
         resp += ser.readline()[0:-2]
 
     return resp
