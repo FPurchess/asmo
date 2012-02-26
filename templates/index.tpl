@@ -11,13 +11,13 @@
 </head>
 <body>
 %if not init:
-<div class="warning">Warning: Serial Connection has not be established!</div>
+<div class="warning">Warning: Serial Connection has not been established!</div>
 %end
 <form method="post" action="/">
     <label for="serial">Serial Command:</label>
     <input id="serial" type="text" name="serial" value="">
 </form>
 <pre></pre>
-<p>&copy; asmo - arduino serial monitor online; 2012 Florian Purchess</p>
+<p>&copy; 2012 asmo - a serial monitor online . Florian Purchess</p>
 </body>
 </html>
