@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.warning {
+    background: #ff0;
+    color: #000;
+    margin: 0 0 20px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    width: 500px;
+}
+
+pre {
+    background: #000;
+    color: #fff;
+    line-height: 1.4em;
+    font-family: monospace;
+    font-size: 14px;
+    margin: 20px;
+    padding: 20px;
+    height: 500px;
+}
+
+p {
+    bottom: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+.out {
+    color: #f00;
+}
