@@ -11,9 +11,9 @@ To configure it, copy the example.conf and rename it to config.conf. The options
 After setting up asmo, run app.py to start the webserver
 
 #### Webserver [server] ####
-host - hostname (default "localhost")
+host - hostname (default "localhost")  
 port - port of the webserver (default 8080)
 
 #### Serial Connection [serial] ####
-serial - path to your serial adapter
+serial - path to your serial adapter  
 baud - baud-rate
